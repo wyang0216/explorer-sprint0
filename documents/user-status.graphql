@@ -1,0 +1,15 @@
+query getUserStatus($login: String!) {
+  user(login: $login) {
+    status {
+      emoji
+    }
+  }
+}
+
+mutation setUserStatus($emojiText: String!, $text: String!) {
+  changeUserStatus(input: {emoji: $emojiText, message: $text}) {
+    status {
+      emoji
+    }
+  }
+}

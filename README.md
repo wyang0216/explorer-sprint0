@@ -1,70 +1,122 @@
-# best-practice README
+![VSCode User Status Banner](./banner.png)
 
-This is the README for your extension "best-practice". After writing up a brief description, we recommend including the following sections.
+<h2 align="center">Supported</h2>
+<p align="center">
+  <em><a href="https://github.com/">GitHub</a> · <a href="https://slack.com/">Slack</a></em>
+</p>
 
-## Features
+<!-- Should add align=center to the parent p tag -->
+<p align="center"><a href="https://marketplace.visualstudio.com/items?itemName=nju33.vscode-user-status"><img src="https://badgen.net/vs-marketplace/v/nju33.vscode-user-status" alt="vscode marketplace"></a>
+<img src="https://github.com/nju33/vscode-user-status/workflows/.github/workflows/test.yml/badge.svg" alt=".github/workflows/test.yml">
+<a href="https://codecov.io/gh/nju33/vscode-user-status"><img src="https://codecov.io/gh/nju33/vscode-user-status/branch/master/graph/badge.svg" alt="codecov"></a>
+<a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="code style: prettier"></a>
+<img src="https://badgen.net/badge/icon/typescript?icon=typescript&amp;label" alt="typescript"></p>
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
-For example if there is an image subfolder under your extension project workspace:
+<!-- 
+[![vscode marketplace](https://badgen.net/vs-marketplace/v/nju33.vscode-user-status)](https://marketplace.visualstudio.com/items?itemName=nju33.vscode-user-status)
+![.github/workflows/test.yml](https://github.com/nju33/vscode-user-status/workflows/.github/workflows/test.yml/badge.svg)
+[![codecov](https://codecov.io/gh/nju33/vscode-user-status/branch/master/graph/badge.svg)](https://codecov.io/gh/nju33/vscode-user-status)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+![typescript](https://badgen.net/badge/icon/typescript?icon=typescript&label)
+ -->
 
-\!\[feature X\]\(images/feature-x.png\)
+### Intro
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+A VSCode extension to switch user status of multiple services from it.
 
-## Requirements
+### Extension Settings
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- `userStatus.priority` Which one priority to get current user status: `github`(default), `slack`
+- `userStatus.language` Status language: `en`(default), `ja`
+- `userStatus.status` Additional status list
+- `userStatus.github` Setting about GitHub
+- `userStatus.slack` Setting about Slack
 
-## Extension Settings
+For instance, you do settings following like.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+```json
+{
+  "userStatus.priority": "github",
+  "userStatus.language": "en",
+  "userStatus.status": {
+    "📝": {
+      "github": {
+        "emojiName": "memo"
+      },
+      "slack": {
+        "emojiName": "memo"
+      },
+      "text": "Writing",
+      "priority": 150
+    },
+    "🍿": {
+      "github": {
+        "emojiName": "popcorn"
+      },
+      "slack": {
+        "emojiName": "popcorn"
+      },
+      "text": "Watching a movie",
+      "priority": 900
+    }
+  },
+  "userStatus.github": {
+    "enable": true,
+    "username": "GITHUB_USER_NAME",
+    "accessToken": "GITHUB_PERSONAL_ACCESS_TOKEN"
+  },
+  "userStatus.slack": {
+    "enable": true,
+    "workspaces": [
+      {
+        "user": "SLACK_MEMBER_ID",
+        "accessToken": "SLACK_OAUTH_ACCESS_TOKEN"
+      },
+      {
+        "user": "SLACK_MEMBER_ID(2)",
+        "accessToken": "SLACK_OAUTH_ACCESS_TOKEN(2)"
+      }
+    ]
+  }
+}
+```
 
-For example:
+### Preset
 
-This extension contributes the following settings:
+| emoji | priority | en                | ja               |
+| :---: | :------: | :---------------- | :--------------- |
+|  🎯   |   700    | Focusing          | 集中             |
+|   ☕   |   600    | Taking a break    | 休憩中           |
+|  🗓   |   500    | In a meeting      | 会議中           |
+|  🚌   |   400    | On my way to work | 通勤途中         |
+|  🌴   |   300    | On Vacation       | 休暇中           |
+|  🏡   |   200    | Working from home | リモートで作業中 |
+|  🤒   |   100    | Out sick          | 病欠             |
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+### Status
 
-## Known Issues
+Each status item is sorted by `priority` of the setting property in descending numerical order.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+### Contributors ✨
 
-## Release Notes
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Users appreciate release notes as you update your extension.
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
-### 1.0.0
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://nju33.com/"><img src="https://avatars2.githubusercontent.com/u/15901038?v=4" width="100px;" alt=""/><br /><sub><b>純</b></sub></a><br /><a href="https://github.com/nju33/vscode-user-status/commits?author=nju33" title="Code">💻</a> <a href="#question-nju33" title="Answering Questions">💬</a> <a href="https://github.com/nju33/vscode-user-status/pulls?q=is%3Apr+reviewed-by%3Anju33" title="Reviewed Pull Requests">👀</a></td>
+  </tr>
+</table>
 
-Initial release of ...
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

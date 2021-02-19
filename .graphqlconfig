@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "prod": {
+      "extensions": {
+        "endpoints": {
+          "default": {
+            "url": "https://api.github.com/graphql",
+            "headers": {
+              "Authorization": "Bearer ACCESS_TOKEN"
+            }
+          }
+        }
+      }
+    }
+  }
+}
