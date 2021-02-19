@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "/",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "json.schemas": [
+      {
+        "fileMatch": ["i18n/**/status.json"],
+        "url": "./src/schemas/status.json"
+      }
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib"
+  }
+}

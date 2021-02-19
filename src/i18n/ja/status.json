@@ -1,0 +1,72 @@
+{
+  "🎯": {
+    "slack": {
+      "emojiName": "dart"
+    },
+    "github": {
+      "emojiName": "dart"
+    },
+    "text": "集中",
+    "priority": 700
+  },
+  "☕": {
+    "slack": {
+      "emojiName": "coffee"
+    },
+    "github": {
+      "emojiName": "coffee"
+    },
+    "text": "休憩中",
+    "priority": 600
+  },
+  "🗓": {
+    "slack": {
+      "emojiName": "spiral_calendar_pad"
+    },
+    "github": {
+      "emojiName": "spiral_calendar"
+    },
+    "text": "会議中",
+    "priority": 500
+  },
+  "🚌": {
+    "slack": {
+      "emojiName": "bus"
+    },
+    "github": {
+      "emojiName": "bus"
+    },
+    "text": "通勤途中",
+    "priority": 400
+  },
+  "🌴": {
+    "slack": {
+      "emojiName": "palm_tree"
+    },
+    "github": {
+      "emojiName": "palm_tree"
+    },
+    "text": "休暇中",
+    "priority": 300
+  },
+  "🏡": {
+    "slack": {
+      "emojiName": "house_with_garden"
+    },
+    "github": {
+      "emojiName": "house_with_garden"
+    },
+    "text": "リモートで作業中",
+    "priority": 200
+  },
+  "🤒": {
+    "slack": {
+      "emojiName": "face_with_thermometer"
+    },
+    "github": {
+      "emojiName": "face_with_thermometer"
+    },
+    "text": "病欠",
+    "priority": 100
+  }
+}
